@@ -202,7 +202,9 @@ img {
 footer{
     margin: 0;
     padding: 20px;
-    background: rgb(122,122, 122);
+    background: rgb(122, 122, 122);
+    height: 400px;
+
     width: 100%;
     font-family: sans-serif;
     padding-top: 48px;
@@ -260,6 +262,39 @@ footer{
     word-spacing: 2px;
     text-transform:capitalize;
 
+}
+
+/* Changes By Sudhanshu */
+
+.socials li a{
+  padding: 4px 8px;
+}
+
+.fa-google:hover{
+  color: yellow;
+}
+
+.fa-twitter:hover{
+  color: rgb(0, 162, 255);
+}
+
+.fa-facebook:hover{
+  color: rgb(38, 108, 212);
+}
+
+.fa-linkedin:hover{
+  color: rgb(8, 8, 255);
+}
+
+.fa-youtube:hover{
+  color: red;
+}
+.fa-instagram:hover{
+  color: palevioletred;
+}
+
+.footer_content h3:hover{
+  font-weight: bold;
 }
 
 /* .footer_bottom span{
