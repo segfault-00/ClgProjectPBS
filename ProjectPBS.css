@@ -201,7 +201,7 @@ img {
 footer{
     margin: 0;
     padding: 20px;
-    background: black;
+    background: rgb(122, 122, 122);
     height: 400px;
     width: 100%;
     font-family: sans-serif;
@@ -249,10 +249,10 @@ footer{
     font-size: 1.1rem;
     transition: color .4s ease;
 }
-.socials a:hover i
+/* .socials a:hover i
 {
     color: red;
-}
+} */
 .footer_bottom{
     text-align: center;
 
@@ -263,6 +263,39 @@ footer{
     word-spacing: 2px;
     text-transform:capitalize;
 
+}
+
+/* Changes By Sudhanshu */
+
+.socials li a{
+  padding: 4px 8px;
+}
+
+.fa-google:hover{
+  color: yellow;
+}
+
+.fa-twitter:hover{
+  color: rgb(0, 162, 255);
+}
+
+.fa-facebook:hover{
+  color: rgb(38, 108, 212);
+}
+
+.fa-linkedin:hover{
+  color: rgb(8, 8, 255);
+}
+
+.fa-youtube:hover{
+  color: red;
+}
+.fa-instagram:hover{
+  color: palevioletred;
+}
+
+.footer_content h3:hover{
+  font-weight: bold;
 }
 
 /* .footer_bottom span{
