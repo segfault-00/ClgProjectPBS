@@ -115,6 +115,7 @@ img {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  z-index: 2;
 }
 
 /* Style the navigation bar links */
@@ -202,8 +203,8 @@ footer{
     padding: 20px;
     background: black;
     height: 400px;
-    width: 100vw;
-    font-family: "Open Sans";
+    width: 100%;
+    font-family: sans-serif;
     padding-top: 48px;
     color: #f1f1f1;
 }
