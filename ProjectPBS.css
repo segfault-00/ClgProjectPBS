@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -11,95 +10,103 @@ body {
 
 /* Header/logo Title */
 
-
 /* Slideshow container */
 .slideshow-container {
-    width: 100%;
-    height: 281px;
-    position: relative;
-    margin: auto;
-  }
-  img{
-      object-fit: cover;
-      height: 300px;
-      width: 100%;
-      z-index: -1;
-  }
+  width: 100%;
+  height: 281px;
+  position: relative;
+  margin: auto;
+}
+img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  z-index: -1;
+}
 
-  .side , .main{
-      z-index: 1;
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+.side,
+.main {
+  z-index: 1;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+}
 
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.slidtext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active :hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
   }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  to {
+    opacity: 1;
   }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
   }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .slidtext {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  
-  .active :hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
+}
 
 /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
 .navbar {
@@ -120,7 +127,6 @@ body {
   text-decoration: none;
 }
 
-
 /* Right-aligned link */
 .navbar a.right {
   float: right;
@@ -134,12 +140,12 @@ body {
 
 /* Active/current link */
 .navbar a.active {
-  background-color: #666;
+  /* background-color: #666; */
   color: white;
 }
 
 /* Column container */
-.row {  
+.row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
@@ -156,7 +162,7 @@ body {
 }
 
 /* Main column */
-.main {   
+.main {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   background-color: white;
@@ -165,21 +171,14 @@ body {
 
 /* Fake image, just for this example */
 .fakeimg {
-  background-color: #aaa;
+  /* background-color: #aaa; */
   width: 100%;
   padding: 20px;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row {   
+  .row {
     flex-direction: column;
   }
 }
@@ -190,4 +189,95 @@ body {
     float: none;
     width: 100%;
   }
+}
+
+.footer_design{
+    padding: 0;
+    box-sizing: border-box;
+    background: #1111;
+}
+
+footer{
+    margin: 0;
+    padding: 20px;
+    background: black;
+    height: 400px;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 48px;
+    color: #f1f1f1;
+}
+.footer_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.footer_content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+
+}
+.footer_content p{
+    max-width: 500px;
+    margin: 10px auto;
+    /* line-height: 28px; */
+    font-size: 14px;
+
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover i
+{
+    color: red;
+}
+.footer_bottom{
+    text-align: center;
+
+}
+.footer_bottom p
+{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform:capitalize;
+
+}
+
+/* .footer_bottom span{
+    text-transform: uppercase;
+    color: red;
+    font-weight: 200;
+    font-weight: bolder;
+
+} */
+
+#foot{
+    color: white;
+    font-weight: 200;
+    font-weight: bolder;
+}
+span{
+    color: red;
+    font-weight: bolder;
 }
