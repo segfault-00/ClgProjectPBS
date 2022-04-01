@@ -11,8 +11,9 @@ body {
 /**********************************************************************/
 .navbar {
   width: 100%;
-  background-color: #555;
-  overflow: hidden;
+  background-color: rgb(122, 122, 122);
+  overflow: auto;
+  align-content: center;
   top: 0;
   position: sticky;
   z-index: 2;
@@ -21,8 +22,8 @@ body {
 
 .navbar a {
   float: left;
-  padding: 12px;
-  color: white;
+  padding: 12px 20px 12px 20px;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 17px;
 }
@@ -245,7 +246,7 @@ span.psw {
 footer{
     margin: 0;
     padding: 20px;
-    background: rgb(122, 122, 122);
+    background: rgb(144 88 205);
     height: 415px;
 
     width: 100%;
@@ -390,18 +391,26 @@ footer{
     color: red;
     font-weight: bolder;
 } */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  margin-top: 8px;
-  margin-bottom: 4px;
+.card{
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
   text-align: center;
-  background-color: #f1f1f1;
+  display: block;
+  font-size: 25px;
+  background-color: #e6e6e6;
+  transition-duration: 300ms;
+}
+
+.card:hover{
+  background-color: rgb(144 88 205);
+  color: white;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0,0.6);
 }
 .new_column {
   overflow: hidden;
-  float: left;
-  width: 25%;
+  /* float: left; */
+  width: 100%;
   padding: 0 10px;
 }
 
@@ -424,3 +433,62 @@ footer{
 }
 
 /* .cancelbtn */
+
+
+/* Sidebar CSS */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#profile_image{
+  /* padding-right: 40px;
+  padding-left: 40px; */
+  margin-left: 100px;
+  height: 160px;
+  width: 160px;
+  /* width: 200px; */
+  border-radius: 50%;
+}
+
+.details{
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
