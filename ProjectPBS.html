@@ -19,6 +19,7 @@
     <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
     <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
     <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-fw fa-user"></i> Login</a>
+    <a href="#" onclick="openNav()">My Account</a>
   </div>
   <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
   <div id="id01" class="modal">
@@ -70,38 +71,36 @@
 
 
   <div class="row">
-    <div class="side">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg" style="height: 200px">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3>More Text</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div class="fakeimg" style="height: 60px">Image</div>
-      <br />
-      <div class="fakeimg" style="height: 60px">Image</div>
-      <br />
-      <div class="fakeimg" style="height: 60px">Image</div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="profile">
+        <img src="./Images/sun.jpg" id="profile_image">
+        <div class="details">
+          <p>Sudhanshu Chaubey</p>
+          <p>KNIT Sultanpur</p>
+          <p>Roll No - 20258</p>
+        </div>
+      </div>
     </div>
     <div class="main">
       <div class="new_row">
         <div class="new_column">
-          <div class="card">
+          <div class="card" id="card1">
             <h3>Card 1</h3>
             <p>Some text</p>
             <p>Some text</p>
           </div>
         </div>
-
-        <div class="new_column">
+      
+        <div class="new_column" id="card2">
           <div class="card">
             <h3>Card 2</h3>
             <p>Some text</p>
             <p>Some text</p>
           </div>
         </div>
-
-        <div class="new_column">
+        
+        <div class="new_column" id="card3">
           <div class="card">
             <h3>Card 3</h3>
             <p>Some text</p>
@@ -109,17 +108,42 @@
           </div>
         </div>
 
-        <div class="new_column">
-          <div class="card">
-            <h3>Card 3</h3>
-            <p>Some text</p>
-            <p>Some text</p>
-          </div>
-        </div>
 
-        <div class="new_column">
+        <div class="new_column" id="card4">
           <div class="card">
             <h3>Card 4</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+          </div>
+        </div>
+
+        <div class="new_column" id="card5">
+          <div class="card">
+            <h3>Card 5</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+          </div>
+        </div>
+
+        <div class="new_column" id="card6">
+          <div class="card">
+            <h3>Card 6</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+          </div>
+        </div>
+
+        <div class="new_column" id="card7">
+          <div class="card">
+            <h3>Card 7</h3>
+            <p>Some text</p>
+            <p>Some text</p>
+          </div>
+        </div>
+        
+        <div class="new_column" id="card8">
+          <div class="card">
+            <h3>Card 8</h3>
             <p>Some text</p>
             <p>Some text</p>
           </div>
@@ -152,51 +176,8 @@
   </div>
 
   <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
-    <script>
-      // Automatic Slideshow - change image every 4 seconds
-      var myIndex = 0;
-      carousel();
-      
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";  
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}    
-        x[myIndex-1].style.display = "block";  
-        setTimeout(carousel, 2000);    
-      }
-      
-      // Used to toggle the menu on small screens when clicking on the menu button
-      function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else { 
-          x.className = x.className.replace(" w3-show", "");
-        }
-      }
-      
-      // When the user clicks anywhere outside of the modal, close it
-      var modal = document.getElementById('ticketModal');
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-      </script>
+    carousel();
+  </script>
 </body>
 
 </html>
